@@ -1,0 +1,14 @@
+{% extends "padre.html" %}
+
+{% block title %} Crear curso {% endblock %}
+
+{% block content %}
+
+<h2>Crear Curso</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+{% endblock %}

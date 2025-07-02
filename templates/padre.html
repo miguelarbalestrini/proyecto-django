@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %} Inicio - Mi Sitio Web {% endblock %}</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background: #f2f2f2; color: #333;">
+
+ {% block header %}
+  <!-- Encabezado -->
+  <header style="background-color: #4CAF50; padding: 20px; text-align: center; color: white;">
+    <h1 style="margin: 0;">Hola Mundo</h1>
+    <p style="margin: 5px 0;">Tu lugar para aprender y descubrir</p>
+  </header>
+{% endblock %}
+  <!-- Contenido principal -->
+  <main style="padding: 40px; text-align: center;">
+    {% block content %}
+    <h2 style="color: #4CAF50;">¿Qué ofrecemos?</h2>
+    <p style="max-width: 600px; margin: 0 auto 30px;">
+      En nuestro sitio encontrarás recursos educativos, noticias de tecnología y herramientas útiles para tu día a día digital.
+    </p>
+    {% endblock %}
+    <a href="#servicios" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
+      Ver más
+    </a>
+  </main>
+
+
+
+  <!-- Sección de servicios -->
+  <section id="servicios" style="background: white; padding: 40px 20px;">
+    <h3 style="text-align: center; color: #333;">Nuestros Servicios</h3>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+      <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; width: 250px;">
+        <h4 style="margin-top: 0;">Tutoriales</h4>
+        <p>Guías paso a paso para aprender nuevas habilidades.</p>
+      </div>
+      <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; width: 250px;">
+        <h4 style="margin-top: 0;">Noticias</h4>
+        <p>Últimas novedades sobre ciencia y tecnología.</p>
+      </div>
+      <div style="background: #fff3e0; padding: 20px; border-radius: 10px; width: 250px;">
+        <h4 style="margin-top: 0;">Herramientas</h4>
+        <p>Utilidades online que te facilitarán la vida.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer style="background-color: #333; color: white; text-align: center; padding: 15px; margin-top: 40px;">
+    <p style="margin: 0;">&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html> 
