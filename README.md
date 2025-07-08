@@ -1,3 +1,3 @@
 # Proyecto Django
 
-Este proyecto esta desarollado en django
+Este proyecto esta desarollado en django.

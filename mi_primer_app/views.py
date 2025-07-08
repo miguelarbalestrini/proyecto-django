@@ -7,6 +7,8 @@ from .forms import CursoForm, EstudianteForm
 # Create your views here.
 from django.http import HttpResponse
 
+# view de inicio
+
 
 def inicio(request):
     return render(request, 'mi_primer_app/inicio.html')
