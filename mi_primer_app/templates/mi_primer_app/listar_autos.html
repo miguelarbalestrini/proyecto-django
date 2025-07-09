@@ -1,0 +1,19 @@
+{% extends "padre.html" %}
+
+{% block content %}
+
+<h2>Lista de Autos</h2>
+
+<ul>
+    {% for auto in autos %}
+        <li>
+         {{ auto.modelo }}
+        <a href="{% url 'detalle-auto' auto.pk %}">Ver Detalle</a>
+        <a href="{% url 'editar-auto' auto.pk %}">Editar</a>
+        <a href="{% url 'eliminar-auto' auto.pk %}">Eliminar</a>
+        </li>
+    {% empty %}
+        <li>No hay autos disponibles.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

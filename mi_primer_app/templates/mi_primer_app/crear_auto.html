@@ -1,0 +1,12 @@
+{% extends "padre.html" %}
+{% block content %}
+
+<h2>Crear auto</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+
+{% block content %}
+
+<h1>¿Estás seguro de que deseas eliminar este auto?</h1>
+<p>{{ object.marca }} {{ object.modelo }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>
+
+<a href="{% url 'listar-autos' %}">Cancelar</a>
+
+
+{% endblock %}
