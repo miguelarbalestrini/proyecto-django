@@ -6,6 +6,8 @@ from .models import Familiar, Curso, Estudiante, Auto
 
 from .forms import CursoForm, EstudianteForm, AutoForm
 
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 from django.http import HttpResponse
 
@@ -38,6 +40,7 @@ def crear_familiar(request, nombre):
     return render(request, "mi_primer_app/crear_familiar.html", {"nombre": nombre})
 
 
+@login_required
 def crear_curso(request):
 
     if request.method == 'POST':
